@@ -1,0 +1,16 @@
+body {
+  font-size: 40px;
+}
+
+ul, ol {
+  padding: 0; /*Tirar o comportamento padrão do browser*/
+}
+
+li {
+  margin-left: 60px;
+}
+
+.tag {
+  border: solid 4px;
+  margin: 5px;
+}

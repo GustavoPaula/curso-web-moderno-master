@@ -1,0 +1,45 @@
+<form action="/pagina-processa-dados-do-form" method="POST">
+    <label for="usuario">Usuario</label>
+    <input type="text" name="nome" id="usuario">
+
+    <label for="senha">Senha</label>
+    <input type="password" name="senha" id="senha">
+
+    <label for="comentario"> Comentário</label>
+    <textarea name="bio" cols="30" rows="10" id="comentario"></textarea>
+    <div>
+        <input type="radio" name="tipo" value="basico"> Básico
+        <input type="radio" name="tipo" value="intermediario"> Intermediario
+        <input type="radio" name="tipo" value="avancado"> Avançado
+    </div>
+    <div>
+        <input type="checkbox" name="ativo"> Ativo
+    </div>
+    <select name="estado">
+        <option value="sp">São Paulo </option>
+        <option value="rj">Rio de Janeiro </option>
+        <option value="mg">Minas Gerais</option>
+    </select>
+    <select name="interesses" multiple size="5">
+        <option value="php">PHP</option>
+        <option value="js">Javascript</option>
+        <option value="python">Python</option>
+        <option value="go">Go</option>
+        <option value="java">Java</option>
+    </select> 
+    <button>Incluir</button>
+</form>
+
+<style>
+    input, 
+    textarea,
+    select {
+        display: block;
+        margin-bottom: 10px;
+    }
+    input[type=radio],
+    input[type="checkbox"]
+    {
+        display: inline;
+    }
+</style>

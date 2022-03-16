@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Grid #01</title>
+    <style>
+        /* https://caniuse.com/#feat=css-grid */
+        
+        html,
+        body {
+            margin: 20px;
+            height: calc(100% - 40px);
+            background-color: lightgray;
+        }
+        
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            border: solid 5px dodgerblue;
+            background: #fff;
+        }
+        
+        body {
+            display: grid;
+            grid-template-columns: 50% 50%; /*Definimos as colunas e o tamanho de cada uma delas*/
+            grid-template-columns: repeat(4, 8.33% 8.33% 8.33%); /*Lados iguais, nesse caso vai multiplicar 8.33 por 4
+            e o resultado vai ser 12x o tamanho de 8.33 onde vai ser 12 colunas*/
+            grid-template-columns: repeat(4, 8.33%); /*4 colunas com 8.33 de espaço*/
+            grid-template-columns: repeat(12, 100px); /*12 colunas com 100px de espaço*/
+            grid-template-columns: 200px 20% 1fr; /*3 colunas onde a primeira vai ter 200px,
+            a segunda vai ter 20% e a terceira o restante do espaço que sobrar*/
+            grid-template-columns: 3fr 6fr 3fr; /*3 colunas onde a primeira vai pegar 3 fragmentos
+            a segunda vai pegar 6 fragmentos e a terceira vai pegar 3 fragmentos*/
+            grid-template-rows: 50% 25% 12.5% 12.5%; /*4 linhas onde a primeira 50%, a segunda 25%
+            a terceira e a quarta linha vão ter 12.5%*/
+            grid-template-rows: 100px 1fr; /*primeira linha com 100px, a segunda linha vai pegar o restante que sobrar
+            só que a terceira e a quarta vão estar com o tamanho minimo necessário */
+            grid-template-rows: 100px auto; /*primeira linha com 100px e o restante com valor igual*/
+        }
+
+        .d8 {
+            grid-column-start: 2;
+            grid-column-end: 4; /*Essas duas propriedades significa que o elemento marcado com a classe d8, a coluna
+            vai ter inicio na linha 2 e vai terminar na linha 4*/
+            grid-column-end: span 2; /*Essa propriedade faz a mesma coisa, só que o span 2 significa pra pular 2 casas
+            tendo o mesmo resultado*/
+            grid-row-start: 3;
+            grid-row-end: 5;/*Essa propriedade vai ter inicio na linha 3 e vai até a linha 5, onde o 8 vai ocupar as
+            casas até na linha 5*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d1">1</div>
+    <div class="d2">2</div>
+    <div class="d3">3</div>
+    <div class="d4">4</div>
+    <div class="d5">5</div>
+    <div class="d6">6</div>
+    <div class="d7">7</div>
+    <div class="d8">8</div>
+    <div class="d9">9</div>
+    <div class="d10">10</div>
+    <div class="d11">11</div>
+    <div class="d12">12</div>
+</body>
+
+</html>
